@@ -1,0 +1,38 @@
+<mat-card class="curso-card">
+  <div class="card-glow"></div>
+  <div class="card-header">
+    <div class="card-badge">
+      <span>⚡</span>
+      <span>Interativo</span>
+    </div>
+    <div class="card-gradient"></div>
+  </div>
+  
+  <mat-card-header class="card-title-section">
+    <mat-card-title>{{ curso.titulo }}</mat-card-title>
+    <mat-card-subtitle>Curso de Inteligência Artificial</mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content class="card-content">
+    <p class="card-description">{{ curso.descricao }}</p>
+    
+    <div class="valores">
+      <div class="valor-item valor-aa">
+        <span class="valor-label">À vista</span>
+        <span class="valor-amount">R$ {{ curso.valorAA }}</span>
+      </div>
+      <div class="valor-divider"></div>
+      <div class="valor-item valor-mes">
+        <span class="valor-label">Mensal</span>
+        <span class="valor-amount">R$ {{ curso.valorMes }}</span>
+      </div>
+    </div>
+  </mat-card-content>
+  
+  <mat-card-actions class="card-actions">
+    <button mat-raised-button class="btn-matricula">
+      <span>Matricule-se Agora</span>
+      <span class="btn-arrow">→</span>
+    </button>
+  </mat-card-actions>
+</mat-card>

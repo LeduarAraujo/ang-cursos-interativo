@@ -1,0 +1,78 @@
+<mat-toolbar class="toolbar">
+  <span class="brand">
+    <span class="brand-icon">⚡</span>
+    <span>Interativo</span>
+  </span>
+  <span class="spacer"></span>
+  <nav class="nav-links">
+    <button mat-button>Catálogo</button>
+    <button mat-button>Sobre</button>
+    <button mat-raised-button class="btn-contato">Contato</button>
+  </nav>
+</mat-toolbar>
+
+<section class="hero">
+  <div class="hero-background"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span>🚀 Cursos de IA</span>
+    </div>
+    <h1 class="hero-title">
+      Domine a <span class="gradient-text">Inteligência Artificial</span><br>
+      de Forma Prática e Interativa
+    </h1>
+    <p class="hero-description">
+      Do básico ao avançado, escolha o curso ideal para sua jornada.
+      Aprenda com os melhores e transforme sua carreira.
+    </p>
+    <div class="hero-actions">
+      <button mat-raised-button class="btn-primary">Explorar Cursos</button>
+      <button mat-stroked-button class="btn-secondary">Fale Conosco</button>
+    </div>
+  </div>
+  <div class="hero-grid"></div>
+</section>
+
+<section class="lista-cursos">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Nossos Cursos</h2>
+      <p class="section-subtitle">Escolha o melhor caminho para sua jornada em IA</p>
+    </div>
+
+    <div class="grid-container">
+      @if (cursos$ | async; as cursos) {
+        @if (cursos.length === 0) {
+          <div class="empty-state">
+            <span class="empty-icon">📚</span>
+            <p class="empty-text">Nenhum curso disponível no momento.</p>
+            <p class="empty-subtext">Em breve teremos novos cursos para você!</p>
+          </div>
+        } @else {
+          <div class="cards-grid">
+            @for (curso of cursos; track curso.titulo) {
+              <app-curso-card [curso]="curso"></app-curso-card>
+            }
+          </div>
+        }
+      } @else {
+        <div class="loading-state">
+          <mat-spinner diameter="56" [strokeWidth]="4"></mat-spinner>
+          <p class="loading-text">Carregando cursos incríveis...</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <span class="brand-icon">⚡</span>
+      <span>Interativo</span>
+    </div>
+    <div class="footer-text">
+      © {{ currentYear }} Interativo — Todos os direitos reservados
+    </div>
+  </div>
+</footer>
