@@ -2,6 +2,12 @@
 
 Landing page para estudo. Nesta landing page contem a divulgação de cursos de Inteligência artifical, de uma empresa fictícia cujo o nome é "Interativo". Nenhum dado divulgado nesta página é real, apenas dádos fictícios.
 
+## 🌐 Ambiente em Produção
+
+**Acesse a aplicação em produção:** [https://ang-cursos-interativo.vercel.app/](https://ang-cursos-interativo.vercel.app/)
+
+> ⚠️ **Nota**: A aplicação em produção consome dados fictícios. Todos os cursos e informações exibidos são apenas para fins de demonstração e estudo.
+
 ## 🎨 Características
 
 - **Design Moderno**: Interface dark com gradientes azuis e efeitos visuais profissionais
@@ -148,8 +154,15 @@ ng build --configuration production
 
 ## 🔄 Deploy
 
+A aplicação está atualmente em produção no **Vercel**:
+
+🌐 **Link de Produção**: [https://ang-cursos-interativo.vercel.app/](https://ang-cursos-interativo.vercel.app/)
+
+### Plataformas de Deploy Disponíveis
+
 O build pode ser feito deploy em:
-- **Netlify** / **Vercel** - Deploy automático
+- **Vercel** - Deploy automático ✅ (Atual)
+- **Netlify** - Deploy automático
 - **GitHub Pages** - Hospedagem estática
 - **AWS S3** / **Azure Storage** - Cloud storage
 - Qualquer servidor web estático (Nginx, Apache)
